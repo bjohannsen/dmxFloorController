@@ -30,56 +30,56 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 LSS += \
-floorDMX328dimmable.lss \
+DMXFloorController.lss \
 
 FLASH_IMAGE += \
-floorDMX328dimmable.hex \
+DMXFloorController.hex \
 
 EEPROM_IMAGE += \
-floorDMX328dimmable.eep \
+DMXFloorController.eep \
 
 SIZEDUMMY += \
 sizedummy \
 
 
 # All Target
-all: floorDMX328dimmable.elf secondary-outputs
+all: DMXFloorController.elf secondary-outputs
 
 # Tool invocations
-floorDMX328dimmable.elf: $(OBJS) $(USER_OBJS)
+DMXFloorController.elf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: AVR C Linker'
-	avr-gcc -Wl,-Map,floorDMX328dimmable.map -mmcu=atmega328p -o"floorDMX328dimmable.elf" $(OBJS) $(USER_OBJS) $(LIBS)
+	avr-gcc -Wl,-Map,DMXFloorController.map -mmcu=atmega328p -o"DMXFloorController.elf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
-floorDMX328dimmable.lss: floorDMX328dimmable.elf
+DMXFloorController.lss: DMXFloorController.elf
 	@echo 'Invoking: AVR Create Extended Listing'
-	-avr-objdump -h -S floorDMX328dimmable.elf  >"floorDMX328dimmable.lss"
+	-avr-objdump -h -S DMXFloorController.elf  >"DMXFloorController.lss"
 	@echo 'Finished building: $@'
 	@echo ' '
 
-floorDMX328dimmable.hex: floorDMX328dimmable.elf
+DMXFloorController.hex: DMXFloorController.elf
 	@echo 'Create Flash image (ihex format)'
-	-avr-objcopy -R .eeprom -O ihex floorDMX328dimmable.elf  "floorDMX328dimmable.hex"
+	-avr-objcopy -R .eeprom -O ihex DMXFloorController.elf  "DMXFloorController.hex"
 	@echo 'Finished building: $@'
 	@echo ' '
 
-floorDMX328dimmable.eep: floorDMX328dimmable.elf
+DMXFloorController.eep: DMXFloorController.elf
 	@echo 'Create eeprom image (ihex format)'
-	-avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex floorDMX328dimmable.elf  "floorDMX328dimmable.eep"
+	-avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex DMXFloorController.elf  "DMXFloorController.eep"
 	@echo 'Finished building: $@'
 	@echo ' '
 
-sizedummy: floorDMX328dimmable.elf
+sizedummy: DMXFloorController.elf
 	@echo 'Invoking: Print Size'
-	-avr-size --format=avr --mcu=atmega328p floorDMX328dimmable.elf
+	-avr-size --format=avr --mcu=atmega328p DMXFloorController.elf
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(OBJS)$(C_DEPS)$(ASM_DEPS)$(EEPROM_IMAGE)$(FLASH_IMAGE)$(ELFS)$(LSS)$(S_DEPS)$(SIZEDUMMY)$(S_UPPER_DEPS) floorDMX328dimmable.elf
+	-$(RM) $(OBJS)$(C_DEPS)$(ASM_DEPS)$(EEPROM_IMAGE)$(FLASH_IMAGE)$(ELFS)$(LSS)$(S_DEPS)$(SIZEDUMMY)$(S_UPPER_DEPS) DMXFloorController.elf
 	-@echo ' '
 
 secondary-outputs: $(LSS) $(FLASH_IMAGE) $(EEPROM_IMAGE) $(SIZEDUMMY)
