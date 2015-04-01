@@ -1,3 +1,8 @@
+/*
+ * adc_handler.c
+ *
+ * Author: @dreimalbe
+ */
 #include "adc_handler.h"
 
 volatile uint16_t _adc_data[ADC_NUM_CHANNELS];

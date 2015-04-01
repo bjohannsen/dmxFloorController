@@ -1,3 +1,10 @@
+/*
+ * dmx_device_ledbar252.h
+ *
+ * Device definitions for Stairville RGB-Bar 252.
+ *
+ * Author: @dreimalbe
+ */
 #ifndef DMX_DEVICE_LEDBAR252_H
 #define DMX_DEVICE_LEDBAR252_H
 
@@ -6,7 +13,7 @@
 #include <string.h>
 #include <avr/pgmspace.h>
 #include <avr/interrupt.h>
-#include "dmx_controller.h"
+#include "../dmx_controller.h"
 
 /* Farbdefinitionen******************************/
 #define DMX_252_COLOR_RED100		255,   0,   0

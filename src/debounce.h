@@ -1,5 +1,11 @@
+/*
+ * debounce.h
+ *
+ * Author: @dreimalbe
+ */
 #ifndef DEBOUNCE_H_
 #define DEBOUNCE_H_
+
 #include <avr/io.h>
 #include <stdio.h>
 #include <string.h>

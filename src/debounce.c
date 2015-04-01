@@ -1,8 +1,12 @@
-#include "debounce.h"
 /*
+ * debounce.c
+ *
  * Debouncing of buttons
  * Based upon solution by Peter Dannegger (https://www.mikrocontroller.net/topic/48465)
+ *
+ * Author: @dreimalbe
  */
+#include "debounce.h"
 
 volatile uint8_t debounce_btn_state = 0;
 volatile uint8_t debounce_btn_press = 0;

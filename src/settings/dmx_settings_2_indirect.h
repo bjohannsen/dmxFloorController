@@ -1,8 +1,15 @@
+/*
+ * dmx_settings_2-indirect.h
+ *
+ * Setup for 2 RGB bars in indirect use.
+ *
+ * Author: @dreimalbe
+ */
 #ifndef DMX_SETTING_FRONT_H_
 #define DMX_SETTING_FRONT_H_
 
-#include "dmx_device_dose.h"
-#include "dmx_device_ledbar252.h"
+#include "../devices/dmx_device_dose.h"
+#include "../devices/dmx_device_ledbar252.h"
 
 #define _SETTINGS_DMX_4
 

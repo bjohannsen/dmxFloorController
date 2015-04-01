@@ -1,3 +1,8 @@
+/*
+ * dmx_tx_driver.c
+ *
+ * Author: @dreimalbe
+ */
 #include "dmx_tx_driver.h"
 
 volatile uint8_t dmx_state;

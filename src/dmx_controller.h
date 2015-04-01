@@ -1,3 +1,8 @@
+/*
+ * dmx_controller.h
+ *
+ * Author: @dreimalbe
+ */
 #ifndef DMX_CONTROLLER_H
 #define DMX_CONTROLLER_H
 

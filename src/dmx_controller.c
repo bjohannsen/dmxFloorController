@@ -1,19 +1,24 @@
+/*
+ * dmx_controller.c
+ *
+ * Author: @dreimalbe
+ */
 #include "dmx_controller.h"
 
 #if CONFIG_NUM_DEVICES == CONFIG_2_DEVICES
  #if CONFIG_SETUP == CONFIG_SETUP_DIRECT
-  #include "dmx_settings_2_direct.h"
+  #include "settings/dmx_settings_2_direct.h"
  #endif
  #if CONFIG_SETUP == CONFIG_SETUP_INDIRECT
-  #include "dmx_settings_2_indirect.h"
+  #include "settings/dmx_settings_2_indirect.h"
  #endif
 #endif
 #if CONFIG_NUM_DEVICES == CONFIG_4_DEVICES
  #if CONFIG_SETUP == CONFIG_SETUP_DIRECT
-  #include "dmx_settings_4_direct.h"
+  #include "settings/dmx_settings_4_direct.h"
  #endif
  #if CONFIG_SETUP == CONFIG_SETUP_INDIRECT
-  #include "dmx_settings_4_indirect.h"
+  #include "settings/dmx_settings_4_indirect.h"
  #endif
 #endif
 

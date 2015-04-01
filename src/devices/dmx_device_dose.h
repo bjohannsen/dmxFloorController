@@ -1,3 +1,10 @@
+/*
+ * dmx_device_dose.h
+ *
+ * Device defintions for simple led spots.
+ *
+ * Author: @dreimalbe
+ */
 #ifndef DMX_DEVICE_DOSE_H
 #define DMX_DEVICE_DOSE_H
 

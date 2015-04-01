@@ -1,3 +1,10 @@
+/*
+ * dmx_device_ledbar252.c
+ *
+ * Device behaviours for Stairville RGB-Bar 252.
+ *
+ * Author: @dreimalbe
+ */
 #include "dmx_device_ledbar252.h"
 
 uint8_t led252_fade(uint8_t* from, uint8_t* to, uint8_t fade_factor)

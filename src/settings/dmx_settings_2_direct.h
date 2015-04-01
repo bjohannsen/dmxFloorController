@@ -1,8 +1,15 @@
+/*
+ * dmx_settings_2-direct.h
+ *
+ * Setup for 2 RGB bars in direct use.
+ *
+ * Author: @dreimalbe
+ */
 #ifndef DMX_SETTING_FRONT_H_
 #define DMX_SETTING_FRONT_H_
 
-#include "dmx_device_dose.h"
-#include "dmx_device_ledbar252.h"
+#include "../devices/dmx_device_dose.h"
+#include "../devices/dmx_device_ledbar252.h"
 
 /* BASE COLORS ************************/
 const uint8_t COLORS_BASE[NUM_COLORS][RGB] PROGMEM = {
